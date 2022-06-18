@@ -3,35 +3,27 @@
 // 1,2,5,7,19,1,2,8 -> 1,2,5,7,19,1,2,8 
 // 6,1,33,5,6,7,7,1 -> 6,1,33,5,6,7,7,1
 
+Console.Clear();
+
 int prompt(string message)
 {
     Console.Write(message);
     int number = int.Parse(Console.ReadLine());
     return number;
 }
+
 int size = prompt("Введите число элементов массива: ");
 int[] array = new int[size];
-int k = 0;
+int a = 0;
 
 void RandomArray01(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        k = new Random().Next(0, 2);
-        array[i] = k;
+        a = new Random().Next(0, 1000);
+        array[i] = a;
     }
 }
-
-int[] RandomArrayF(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        k = new Random().Next(0, 2);
-        array[i] = k;
-    }
-    return array;
-}
-
 
 void PrintArray(int[] array)
 {
@@ -42,7 +34,6 @@ void PrintArray(int[] array)
     }
     Console.WriteLine(array[array.Length - 1] + "]");
 }
-//PrintArray(array);
+
 RandomArray01(array);
 PrintArray(array);
-PrintArray(RandomArrayF(array));

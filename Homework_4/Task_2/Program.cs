@@ -3,22 +3,26 @@
 // 82 -> 10
 // 9012 -> 12
 
-int prompt (string message)
+int Prompt(string message)
 {
-    Console.Write (message);
+    Console.Write(message);
     int number = int.Parse(Console.ReadLine());
     return number;
 }
 
-int factorial (int N)// 5
-{
-    int result = 1;
-    for (int i=2; i <= N; i++) //2 до 5||i=2||i=3||i=4||i=5
+int SumOfDigits(int number){
+    int counter = number.Length;
+    int advance = 0;
+    int result = 0;
+    for (int i = 0; i < counter; i++)
     {
-        result = result*i;// 1*2=2||2*3=6||6*4=24||24*5=120
+        advance = number - number % 10;
+        result = result + (number - advance);
+        numberN = number / 10;
     }
     return result;
 }
 
-int N = prompt("Введите чило: ");
-Console.WriteLine ($"Произведение чисел от 1 до {N} равно {factorial(N)}");
+int number = Prompt("Введите чило => ");
+int sumOfDigits = SumOfDigits(number);
+Console.WriteLine($"Сумма цифр числа {number} равна {SumOfDigits(number)}");
