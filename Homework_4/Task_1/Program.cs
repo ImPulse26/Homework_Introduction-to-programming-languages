@@ -23,5 +23,4 @@ int Exponentiationt (int number1, int number2)
 
 int number1 = Prompt("Введите число => ");
 int number2 = Prompt("Введите степень => ");
-int exponentiationt = Exponentiationt(number1, number2);
 Console.WriteLine($"Число {number1} возведенное в степень {number2} равно => {Exponentiationt(number1, number2)}");

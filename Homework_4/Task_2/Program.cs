@@ -10,19 +10,18 @@ int Prompt(string message)
     return number;
 }
 
-int SumOfDigits(int number){
-    int counter = number.Length;
-    int advance = 0;
-    int result = 0;
-    for (int i = 0; i < counter; i++)
+int SumOfDigits(int number)
+{
+    int digits = 0;
+
+    while (number > 0)
     {
-        advance = number - number % 10;
-        result = result + (number - advance);
-        numberN = number / 10;
+        digits = digits + number % 10;
+
+        number = number / 10;
     }
-    return result;
+    return digits;
 }
 
 int number = Prompt("Введите чило => ");
-int sumOfDigits = SumOfDigits(number);
 Console.WriteLine($"Сумма цифр числа {number} равна {SumOfDigits(number)}");
