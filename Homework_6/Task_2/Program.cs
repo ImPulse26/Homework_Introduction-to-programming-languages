@@ -2,7 +2,7 @@
 // заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-Console.Clear();
+// Console.Clear();
 
 double Prompt(string message)
 {
@@ -19,5 +19,5 @@ double k2 = Prompt($"Введите k2 => ");
 double x = (b2 - b1) / (k1 - k2);
 double y = k1 * x + b1;
 
-if (x == y) Console.WriteLine($"Точка пересечения: ({x:0.0} ; {y:0.0})");
-else Console.WriteLine($"Точки пересечения не существует: ({x:0.0} ; {y:0.0})");
+if ((b1 * k2 - b2 * k1) == 0) Console.WriteLine($"Прямые параллельны и не пересекаются ({x:0.0} ; {y:0.0})");
+else Console.WriteLine($"Точка пересечения: ({x:0.0} ; {y:0.0})");
