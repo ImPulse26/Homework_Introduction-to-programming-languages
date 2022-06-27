@@ -11,14 +11,14 @@ int Prompt(string message)
     return int.Parse(param);
 }
 
-int[] numbers(int M)
+int[] IntNumbers(int quantity)
 {
-    int[] MNumbers = new int[M];
-    for (int i = 0; i < M; i++)
+    int[] QuantityNumbers = new int[quantity];
+    for (int i = 0; i < quantity; i++)
     {
-        MNumbers[i] = Prompt($"Введите {i + 1} из {M} чисел => ");
+        QuantityNumbers[i] = Prompt($"Введите {i + 1} из {quantity} чисел => ");
     }
-    return MNumbers;
+    return QuantityNumbers;
 }
 
 int PositiveNumber(int[] array)
@@ -31,8 +31,8 @@ int PositiveNumber(int[] array)
     return count;
 }
 
-int M = Prompt($"Сколько чисел вывести? => ");
-int[] myNumbers = numbers(M);
+int quantity = Prompt($"Сколько чисел вывести? => ");
+int[] myNumbers = IntNumbers(quantity);
 int countPositiveNumber = PositiveNumber(myNumbers);
 Console.WriteLine($"Положительных чисел => {countPositiveNumber}");
 
