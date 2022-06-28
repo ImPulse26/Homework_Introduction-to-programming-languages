@@ -19,5 +19,5 @@ double k2 = Prompt($"Введите k2 => ");
 double x = (b2 - b1) / (k1 - k2);
 double y = k1 * x + b1;
 
-if ((b1 * k2 - b2 * k1) == 0) Console.WriteLine($"Прямые параллельны и не пересекаются ({x:0.0} ; {y:0.0})");
+if ((b1 * k2 - b2 * k1) == 0) Console.WriteLine($"Прямые параллельны и не пересекаются");
 else Console.WriteLine($"Точка пересечения: ({x:0.0} ; {y:0.0})");
