@@ -22,4 +22,4 @@ void PrintNatural(int M, int N)
     System.Console.Write($"{N};");
 }
 
-PrintNatural(Prompt("write M => "), Prompt("write N => "));
+PrintNatural(Prompt("Введите M => "), Prompt("Введите N => "));
