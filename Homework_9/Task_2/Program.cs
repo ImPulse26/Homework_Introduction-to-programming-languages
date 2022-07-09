@@ -18,7 +18,7 @@ int PrintSumNatural(int M, int N)
 }
 
 int M = Prompt("Введите M => ");
-int N = Prompt("Ввседите N => ");
+int N = Prompt("Введите N => ");
 
 int sum = PrintSumNatural(M, N);
 System.Console.WriteLine($"Cумма натуральных элементов в промежутке от {M} до {N} равна => {sum}");
